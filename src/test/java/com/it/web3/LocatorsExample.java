@@ -12,7 +12,7 @@ public class LocatorsExample extends BaseDriver {
 		
 		driver.manage().window().maximize();
 		driver.get("https://www.shohoz.com/launch/");
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		
 		//webElement is datatype
 		
@@ -50,13 +50,17 @@ public class LocatorsExample extends BaseDriver {
 //		WebElement msg = driver.findElement(By.xpath("//input[@type='text']"));
 //		msg.sendKeys("Shahriar Kabbo");
 //		Thread.sleep(3000);
-//		
+	
 		
-		WebElement msg = driver.findElement(By.xpath("//body/div[@id='main_wrapper']/section[@id='content']/div[@id='search_sec']/div[2]/div[1]/form[1]/ul[1]/div[6]/div[1]/button[1]"));
-		msg.click();
-		Thread.sleep(3000);
+//		WebElement msg = driver.findElement(By.xpath("//body/div[@id='main_wrapper']/section[@id='content']/div[@id='search_sec']/div[2]/div[1]/form[1]/ul[1]/div[6]/div[1]/button[1]"));
+//		msg.click();
+//		Thread.sleep(3000);
 		
 		
+		//css -> elementName[attributeName='attributeValue']
+		WebElement name = driver.findElement(By.cssSelector("input[id='dest_to']"));
+		name.sendKeys("Mamun");
+		Thread.sleep(1000);
 
 		
 		
@@ -64,6 +68,6 @@ public class LocatorsExample extends BaseDriver {
 		
 		
 		
-//		
+
 	}
 }
